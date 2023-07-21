@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+@import "./vars";
+
+* {
+  font-family: $f1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: $black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+h1, h2, h3, h4, h5, ul, p, a {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h1 span {
+  color: $white;
+  font-weight: 500;
+  font-size: $large-text;
+
+  span {
+    font-size: $larger-text;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h2 {
+  font-family: $f3;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 12px;
+  color: $black;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  background: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  background: none;
+  border: none;
+  border-bottom: solid 1px $black;
+  padding: 4px;
+  color: $black;
+  font-size: $reg-text;
+}
+
+label {
+  text-align: left;
+  text-transform: lowercase;
+  font-size: $small-text;
+  font-weight: 600;
+  color: $black;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.btn {
+  background: $black;
+  color: $white;
+  padding: 8px 24px; 
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.btn-sec {
+  background: $p2;
+  color: $black;
+  padding: 12px 32px; 
+  font-weight: 600;
+}
+
+.flex {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+
+  &.row {
+      justify-content: space-between;
+  }
+
+  &.column {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  &.column-reverse {
+      flex-direction: column-reverse;
+      align-items: center;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+.hide {
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.margin-auto {
+  margin: auto;
+}
+
+.page-width {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
 }

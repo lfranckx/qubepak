@@ -1,0 +1,33 @@
+@import "./vars";
+
+.header-wrap {
+    background: $p1;
+}
+
+header {
+    nav {
+        padding: 8px;
+
+        .logo-wrap {
+            max-width: 140px;
+    
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .content-wrap {
+        min-height: 70vh;
+        height: 100%;
+        width: 100%;
+
+        .img-wrap {
+            margin-bottom: 12px;
+        }
+
+        .btn-wrap {
+            margin-top: 42px;
+        }
+    }
+}

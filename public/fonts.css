@@ -1,8 +1,4 @@
 @font-face {
-    font-family: 'HelveticaNeue';
-    src: url('./fonts/HelveticaNeue.ttc');
-}
-@font-face {
     font-family: 'ProximaNova';
     src: url('./fonts/ProximaNova.otf');
 }
@@ -17,4 +13,12 @@
 @font-face {
     font-family: 'ProximaNova-Black';
     src: url('./fonts/ProximaNova-Black.ttf');
+}
+@font-face {
+    font-family: 'HelveticaNeue-Bold';
+    src: url('./fonts/HelveticaNeue-Bold.ttf');
+}
+@font-face {
+    font-family: "RocaOne-Black";
+    src: url('./fonts/Roca-Black.ttf');
 }
