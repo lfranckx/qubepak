@@ -1,0 +1,19 @@
+@import "./vars";
+
+#mission {
+    .content-wrap {
+        // grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+        display: flex;
+
+        img {
+            max-width: 400px;
+        }
+        .title-wrap {
+            background: $p2;
+            padding: 12px 20px;
+        }
+        .body-wrap {
+            padding: 20px;
+        }
+    }
+}

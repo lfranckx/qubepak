@@ -87,6 +87,10 @@ li {
   margin: 0;
 }
 
+section {
+  padding: 2rem;
+}
+
 .absolute {
   position: absolute;
 }
@@ -127,8 +131,16 @@ li {
   }
 }
 
+.grid {
+  display: grid;
+}
+
 .hide {
   display: none;
+}
+
+.img-wrap {
+  // display: flex;
 }
 
 .margin-auto {
