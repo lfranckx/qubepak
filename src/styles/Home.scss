@@ -1,6 +1,7 @@
 @import "./vars";
 
 #mission {
+    padding: 40px 0;
     .content-wrap {
         // grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
         display: flex;
@@ -15,5 +16,22 @@
         .body-wrap {
             padding: 20px;
         }
+    }
+}
+
+#details {
+    img {
+        max-width: 360px;
+        width: 100%;
+
+    }
+
+    h2 {
+        margin-bottom: 12px;
+    }
+
+    .text-wrap {
+        max-width: 700px;
+        margin: 0 40px;
     }
 }

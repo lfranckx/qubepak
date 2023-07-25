@@ -1,7 +1,7 @@
 import React from 'react';
 import globe from '../images/globe.png';
 
-export default function Mission () {
+export default function Mission() {
     return (
         <>
             <section id='mission'>
@@ -22,5 +22,5 @@ export default function Mission () {
                 </div>
             </section>
         </>
-    )
+    );
 }
