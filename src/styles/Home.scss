@@ -20,6 +20,9 @@
 }
 
 #details {
+    h2 {
+        font-size: $largest-text;
+    }
     img {
         max-width: 360px;
         width: 100%;
@@ -33,5 +36,32 @@
     .text-wrap {
         max-width: 700px;
         margin: 0 40px;
+    }
+}
+
+#team {
+    h2 {
+        font-size: $largest-text;
+        text-align: center;
+    }
+
+    h3 {
+        font-family: $f3;
+        font-size: $large-text;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .text-wrap {
+        padding: 0 40px;
+    }
+}
+
+#faq {
+    h2 {
+        font-size: $largest-text;
+        text-align: center;
     }
 }
