@@ -1,9 +1,21 @@
 import '../styles/Footer.scss';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 export default function Footer() {
+    const [btnState, setBtnState] = useState('Send');
+    const [buttonDisabled, handleButtonDisabled] = useState(false);
+    const [message, handleMessage] = useState('');
+
+    const submitForm = (values) => {
+        setBtnState("Sending...");
+    }
+
+    const contactFormSchema = Yup.object().shape({
+
+    });
+
     return (
         <>
             <footer id='footer'>
@@ -11,10 +23,18 @@ export default function Footer() {
                     <div className='column left'>
                         <div className='footer-menu'>
                             <h3>Menu</h3>
-                            <Link to='mission'>Mission</Link>
-                            <Link to='solutions'>Solutions</Link>
-                            <Link to='team'>Meet the Team</Link>
-                            <Link to='faq'>FAQ</Link>
+                            <div className='link-wrap'>
+                                <Link to='mission'>Mission</Link>
+                            </div>
+                            <div className='link-wrap'>
+                                <Link to='solutions'>Solutions</Link>
+                            </div>
+                            <div className='link-wrap'>
+                                <Link to='team'>Meet the Team</Link>
+                            </div>
+                            <div className='link-wrap'>
+                                <Link to='faq'>FAQ</Link>
+                            </div>
                         </div>
                         
                         <div className='footer-address'>
@@ -28,7 +48,11 @@ export default function Footer() {
                     <div className='column right'>
                         <h3>Want to learn more about our product?</h3>
                         <p>Send us a message. We'll buy the coffee.</p>
-                        <Formik>
+                        <Formik
+                            initialValues={{ name: "", email: "", phone: "", message: "" }}
+                            validationSchema={contactFormSchema}
+                            onSubmit={submitForm}
+                        >
                             <Form id='footer-contact'>
 
                             </Form>
@@ -37,5 +61,5 @@ export default function Footer() {
                 </div>
             </footer>
         </>
-    )
+    );
 }
