@@ -1,0 +1,27 @@
+@import './_vars';
+
+#footer {
+    width: 100%;
+    background: $p1;
+    padding: 60px;
+
+    .flex {
+        align-items: baseline;
+    }
+
+    h3 {
+        color: $white;
+        font-family: $f3;
+        margin-bottom: 8px;
+    }
+
+    a, p {
+        color: $white;
+        margin-bottom: 0;
+        line-height: 1.2;
+    }
+
+    .footer-menu {
+        margin-bottom: 20px;
+    }
+}

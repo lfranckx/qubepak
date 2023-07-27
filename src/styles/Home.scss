@@ -64,4 +64,39 @@
         font-size: $largest-text;
         text-align: center;
     }
+
+    .content-wrap {
+        text-align: left;
+        margin: auto;
+        padding: 40px 0;
+    }
+
+    .accordion {
+        max-width: 600px;
+        width: 100%;
+        margin: 20px auto;
+
+        .question {
+            font-family: $f3;
+            font-size: 1.4rem;
+            padding: 10px;
+            width: 100%;
+            background: $p2;
+            cursor: pointer;
+
+            &:hover {
+                background: $black;
+                color: $p2;
+            }
+        }
+
+        .answer {
+            padding: 20px;
+            width: 100%;
+            border: solid 2px $p2;
+            background: none;
+            line-height: 1.5;
+            display: none;
+        }
+    }
 }
