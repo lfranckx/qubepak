@@ -1,5 +1,5 @@
 import '../styles/Header.scss';
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../images/LOGO.png';
 import { Link } from 'react-scroll';
 import { motion, useTransform, useViewportScroll } from "framer-motion";
@@ -7,6 +7,8 @@ import { motion, useTransform, useViewportScroll } from "framer-motion";
 export default function Header() {
     const { scrollYProgress } = useViewportScroll();
     const headerHeight = useTransform(scrollYProgress, [0, 1], ["90vh", "0vh"]);
+
+    const [active, setActive] = useState(false);
 
     return (
         <div className='header-wrap'>
@@ -36,6 +38,12 @@ export default function Header() {
                         </div>
                         <div className='btn-wrap'>
                         <Link className='btn' activeClass="active" to="footer" spy={true} smooth={true} offset={-120} duration={500}>Contact</Link>
+                        </div>
+
+                        <div className='toggler' onClick={() => {setActive(!active)}}>
+                            <div className={`hamburger ${active ? 'active' : ''}`}>
+                                <div className='line'></div>
+                            </div>
                         </div>
                     </nav>
                 </div>
