@@ -7,23 +7,29 @@
         display: flex;
 
         .img-wrap {
+            width: 100%;
+            max-width: 400px;
             img {
                 max-width: 400px;
             }
         }
 
         .text-wrap {
-
             .title-wrap {
                 background: $p2;
                 padding: 12px 20px;
+
+                @media only screen and (max-width: 480px) {
+                    padding: 12px;
+                }
             }
+
             .body-wrap {
                 padding: 20px;
     
                 p {
                     overflow: hidden; 
-                    transition: all ease 2s;
+                    transition: visibilty ease 2s, opacity ease 2s, height ease 2s, margin-bottom ease 0s, ;
                 }
     
                 @media only screen and (min-width: 1081px) {
@@ -46,6 +52,7 @@
             .img-wrap {
                 margin-bottom: -3px;
                 img {
+                    width: 100%;
                     max-width: 400px;
                 }
             }
@@ -54,7 +61,7 @@
                 max-width: 400px;
                 
                 .body-wrap {
-                    padding: 20px 0;
+                    padding: 12px 6px;
                 }
             }
         }
@@ -233,6 +240,8 @@
     @media only screen and (max-width: 780px) {
         h2 {
             margin: 60px 0 20px;
+            text-align: left;
+            padding-left: 20px;
         }
         .row {
             flex-direction: column;

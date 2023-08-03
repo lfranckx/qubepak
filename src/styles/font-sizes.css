@@ -3,6 +3,7 @@
     --largest-text: 3rem;
     --larger-text: 2.4rem;
     --large-text: 1.6rem;
+    --regular-plus-text: 1.28rem;
     --reg-text: 1rem;
     --small-text: .8rem;
 }
@@ -13,7 +14,18 @@
         --largest-text: 2.4rem;
         --larger-text: 1.92rem;
         --large-text: 1.28rem;
+        --regular-plus-text: 1.12rem;
         --reg-text: .8rem;
-        --small-text: 0.64rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    :root {
+        --giant-text: 3.2rem;
+        --largest-text: 2rem;
+        --larger-text: 1.52rem;
+        --large-text: 1rem;
+        --reg-plus-text: 1rem;
+        --reg-text: .8rem; 
     }
 }

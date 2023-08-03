@@ -62,9 +62,7 @@ export default function Footer() {
                         
                         <div className='footer-address'>
                             <h3>QubePak LLC</h3>
-                            <p>123 South First Street</p>
-                            <p>San Jose, CA</p>
-                            <p>95124</p>
+                            <p>Placerville, CA</p>
                         </div>
                     </div>
                     
@@ -104,7 +102,13 @@ export default function Footer() {
                                 </div>
                             </Form>
                         </Formik>
+
+                        <div className='copyright-wrap'>
+                            <small>Copyright © 2021. All rights reserved. QubePak LLC | Website created by <span><a href='https://lfxmedia.io' target="_blank">LFX Media</a></span></small>
+                        </div>
                     </div>
+
+                    
                 </div>
             </footer>
         </>

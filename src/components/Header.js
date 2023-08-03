@@ -17,35 +17,63 @@ export default function Header() {
                 id='header'
                 className='page-width'
             >
-                <div className='nav-wrap'>
-                    <nav id='nav' className='flex row page-width'>
-                        <div className='logo-wrap'>
-                            <Link activeClass="active" to="header" spy={true} smooth={true} offset={0} duration={500}>
+                <div className={active ? 'nav-wrap active' : 'nav-wrap'}>
+                    <nav id='nav' className={`flex row page-width ${active ? 'active' : ''}`}>
+                        <div className={active ? 'logo-wrap active' : 'logo-wrap'}>
+                            <Link 
+                                onClick={() => setActive(!active)}
+                                activeClass="active" to="header" spy={true} smooth={true} offset={0} duration={500}
+                            >
                                 <img src={logo} alt='QubePak logo' />
                             </Link>
                         </div>
-                        <div className='link-wrap'>
-                            <Link activeClass="active" to="mission" spy={true} smooth={true} offset={-120} duration={500}>Mission</Link>
+                        <div className={active ? 'logo-wrap active' : 'logo-wrap'}>
+                            <Link 
+                                onClick={() => setActive(!active)}
+                                activeClass="active" to="mission" spy={true} smooth={true} offset={-120} duration={500}
+                            >
+                                Mission
+                            </Link>
                         </div>
-                        <div className='link-wrap'>
-                            <Link activeClass="active" to="solutions" spy={true} smooth={true} offset={0} duration={500}>Solutions</Link>
+                        <div className={active ? 'logo-wrap active' : 'logo-wrap'}>
+                            <Link 
+                                onClick={() => setActive(!active)}
+                                activeClass="active" to="solutions" spy={true} smooth={true} offset={0} duration={500}
+                            >
+                                Solutions
+                            </Link>
                         </div>
-                        <div className='link-wrap'>
-                            <Link activeClass="active" to="team" spy={true} smooth={true} offset={-120} duration={500}>Team</Link>
+                        <div className={active ? 'logo-wrap active' : 'logo-wrap'}>
+                            <Link 
+                                onClick={() => setActive(!active)}
+                                activeClass="active" to="team" spy={true} smooth={true} offset={-120} duration={500}
+                            >
+                                Team
+                            </Link>
                         </div>
-                        <div className='link-wrap'>
-                            <Link activeClass="active" to="faq" spy={true} smooth={true} offset={-120} duration={500}>FAQ</Link>
+                        <div className={active ? 'logo-wrap active' : 'logo-wrap'}>
+                            <Link 
+                                onClick={() => setActive(!active)}
+                                activeClass="active" to="faq" spy={true} smooth={true} offset={-120} duration={500}
+                            >
+                                FAQ
+                            </Link>
                         </div>
                         <div className='btn-wrap'>
-                        <Link className='btn' activeClass="active" to="footer" spy={true} smooth={true} offset={-120} duration={500}>Contact</Link>
-                        </div>
-
-                        <div className='toggler' onClick={() => {setActive(!active)}}>
-                            <div className={`hamburger ${active ? 'active' : ''}`}>
-                                <div className='line'></div>
-                            </div>
+                            <Link 
+                                onClick={() => setActive(!active)}
+                                className='btn' 
+                                activeClass="active" to="footer" spy={true} smooth={true} offset={-120} duration={500}
+                            >
+                                Contact
+                            </Link>
                         </div>
                     </nav>
+                    <div className='toggler' onClick={() => {setActive(!active)}}>
+                        <div className={`hamburger ${active ? 'active' : ''}`}>
+                            <div className='line'></div>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class='content-wrap flex column'>

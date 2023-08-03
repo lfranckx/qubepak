@@ -4,6 +4,7 @@
     width: 100%;
     background: $p1;
     padding: 60px;
+    position: relative;
 
     .flex {
         align-items: baseline;
@@ -26,6 +27,50 @@
 
         .link-wrap {
             margin-bottom: 8px;
+        }
+    }
+    
+    .copyright-wrap {
+        margin: 20px auto 0;
+        padding: 0 20px;
+        position: absolute;
+        bottom: 12px;
+        left: 0;
+        right: 0;
+        text-align: center; 
+
+        small {
+            a {
+                color: $p2;
+
+                &:hover {
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    #footer {
+        padding: 60px 20px;
+
+        .page-width {
+            padding: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #footer {
+        padding: 60px 12px;
+        
+        .flex {
+            flex-direction: column;
+
+            .column.left {
+                margin-bottom: 20px;
+            }
         }
     }
 }
