@@ -8,10 +8,10 @@ import * as emailjs from 'emailjs-com';
 export default function Footer() {
     const [btnState, handleBtnState] = useState('Send');
     const [btnDisabled, handleBtnDisabled] = useState(false);
-    const [message, handleMessage] = useState('');
+    const [message, handleMessage] = useState(null);
 
     const submitForm = (values) => {
-        handleBtnState("Sending...");
+        handleBtnState("Sending");
 
         const newValues = {
             name: values.name,
@@ -21,13 +21,16 @@ export default function Footer() {
         }
 
         try {
-            emailjs.send("", "", newValues, "")
+            emailjs.send("service_ydxsosc", "template_uaz4bs9", newValues, "user_4ZnH44kohKcJmQhnL2VGX")
             .then(res => {
+                handleMessage("Thanks for getting in touch. Our team will reach out soon.");
                 handleBtnState("Sent");
                 handleBtnDisabled(true);
             }) 
         } catch (error) {
             handleMessage(error.message);
+            handleBtnState("Failed");
+            handleBtnDisabled(true);
         }
     }
 
@@ -102,6 +105,8 @@ export default function Footer() {
                                 </div>
                             </Form>
                         </Formik>
+
+                        {message ? <div className='message'>{message}</div> : <></>}
 
                         <div className='copyright-wrap'>
                             <small>Copyright © 2021. All rights reserved. QubePak LLC | Website created by <span><a href='https://lfxmedia.io' target="_blank">LFX Media</a></span></small>

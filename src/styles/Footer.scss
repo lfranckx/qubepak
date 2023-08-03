@@ -29,6 +29,12 @@
             margin-bottom: 8px;
         }
     }
+
+    .message {
+        margin-top: 20px;
+        color: $black;
+        font-size: var(--reg);
+    }
     
     .copyright-wrap {
         margin: 20px auto 0;
