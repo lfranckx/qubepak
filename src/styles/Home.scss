@@ -19,7 +19,7 @@
     }
 }
 
-#details {
+#solutions {
     h2 {
         font-size: $largest-text;
     }
@@ -40,6 +40,10 @@
 }
 
 #team {
+    .content-wrap {
+        padding: 40px 0;
+    }
+
     h2 {
         font-size: $largest-text;
         text-align: center;
@@ -51,11 +55,12 @@
     }
 
     img {
-        width: 100%;
+        width: 50%;
     }
 
     .text-wrap {
         padding: 0 40px;
+        width: 50%;
     }
 }
 
@@ -91,12 +96,28 @@
         }
 
         .answer {
-            padding: 20px;
+            padding: 0;
             width: 100%;
-            border: solid 2px $p2;
+            border-top: none;
             background: none;
             line-height: 1.5;
-            display: none;
+            height: 0;
+            overflow: hidden;
+
+            &.active {
+                height: fit-content;
+                padding: 20px;
+                border: solid 2px $p2;
+            }
+
+            .text {
+                opacity: 0;
+                transition: all ease-in-out .8s;
+                
+                &.active {
+                    opacity: 1;
+                }
+            }
         }
     }
 }

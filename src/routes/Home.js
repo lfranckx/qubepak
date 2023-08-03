@@ -1,7 +1,7 @@
 import '../styles/Home.scss';
 import React from 'react';
 import Mission from '../components/Mission';
-import Details from '../components/Details';
+import Details from '../components/Solutions';
 import Team from '../components/Team';
 import Faq from '../components/FAQ';
 

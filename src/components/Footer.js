@@ -2,18 +2,41 @@ import '../styles/Footer.scss';
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+import * as emailjs from 'emailjs-com';
 
 export default function Footer() {
-    const [btnState, setBtnState] = useState('Send');
-    const [buttonDisabled, handleButtonDisabled] = useState(false);
+    const [btnState, handleBtnState] = useState('Send');
+    const [btnDisabled, handleBtnDisabled] = useState(false);
     const [message, handleMessage] = useState('');
 
     const submitForm = (values) => {
-        setBtnState("Sending...");
+        handleBtnState("Sending...");
+
+        const newValues = {
+            name: values.name,
+            email: values.email,
+            phone: values.phone,
+            message: values.message
+        }
+
+        try {
+            emailjs.send("", "", newValues, "")
+            .then(res => {
+                handleBtnState("Sent");
+                handleBtnDisabled(true);
+            }) 
+        } catch (error) {
+            handleMessage(error.message);
+        }
     }
 
+    const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
     const contactFormSchema = Yup.object().shape({
-
+        name: Yup.string().max(40, "* Name is too long").required('* Required'),
+        email: Yup.string().email("* Invalid email").required("* Required"),
+        phone: Yup.string().matches(phoneRegExp, `* This doesn't look like a phone number`).max(20, '* Phone number is too long').required("* Required"),
+        message: Yup.string().min(4, "* Message is too short").max(800, "* 800 maximum characters")
     });
 
     return (
@@ -24,16 +47,16 @@ export default function Footer() {
                         <div className='footer-menu'>
                             <h3>Menu</h3>
                             <div className='link-wrap'>
-                                <Link to='mission'>Mission</Link>
+                                <Link activeClass="active" to="mission" spy={true} smooth={true} offset={-120} duration={500}>Mission</Link>
                             </div>
                             <div className='link-wrap'>
-                                <Link to='solutions'>Solutions</Link>
+                                <Link activeClass="active" to="solutions" spy={true} smooth={true} offset={0} duration={500}>Solutions</Link>
                             </div>
                             <div className='link-wrap'>
-                                <Link to='team'>Meet the Team</Link>
+                                <Link activeClass="active" to="team" spy={true} smooth={true} offset={-120} duration={500}>Team</Link>
                             </div>
                             <div className='link-wrap'>
-                                <Link to='faq'>FAQ</Link>
+                                <Link activeClass="active" to="faq" spy={true} smooth={true} offset={-120} duration={500}>FAQ</Link>
                             </div>
                         </div>
                         
@@ -54,7 +77,31 @@ export default function Footer() {
                             onSubmit={submitForm}
                         >
                             <Form id='footer-contact'>
+                                <div className='field-wrap'>
+                                    <label htmlFor='name' id='name'>Name</label>
+                                    <Field name='name' />
+                                </div>
 
+                                <div className='field-wrap'>
+                                    <label htmlFor='email' id='email'>Email</label>
+                                    <Field name='email' />
+                                </div>
+
+                                <div className='field-wrap'>
+                                    <label htmlFor='phone' id='phone'>Phone</label>
+                                    <Field name='phone' />
+                                </div>
+
+                                <div className='field-wrap'>
+                                    <label htmlFor='message' id='message'>Message</label>
+                                    <Field name='message' />
+                                </div>
+
+                                <div className='btn-wrap'>
+                                    <button className="btn" type="submit" disabled={btnDisabled}>
+                                        {btnState}
+                                    </button>
+                                </div>
                             </Form>
                         </Formik>
                     </div>

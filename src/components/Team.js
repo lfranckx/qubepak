@@ -6,8 +6,8 @@ export default function Team() {
     return (
         <>
             <section id='team'>
-                <h2>Meet the Team</h2>
                 <div className='content-wrap'>
+                    <h2>Meet the Team</h2>
                     <div className='flex row'>
                         <div className='text-wrap'>
                             <h3>Robert Michaels</h3>

@@ -6,10 +6,7 @@ export default function Mission() {
         <>
             <section id='mission'>
                 <div className='content-wrap page-width' >
-                    {/* <div className='img-wrap'>
-                        <img class='img' src={globe} alt='The Mission and Vision' />
-                    </div> */}
-                        <img class='img' src={globe} alt='The Mission and Vision' />
+                    <img class='img' src={globe} alt='The Mission and Vision' />
                     <div className='text-wrap'>
                         <div className='title-wrap'>
                             <h2>The Mission and Vision</h2>
