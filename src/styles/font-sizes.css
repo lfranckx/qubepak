@@ -1,0 +1,19 @@
+:root {
+    --giant-text: 5rem;
+    --largest-text: 3rem;
+    --larger-text: 2.4rem;
+    --large-text: 1.6rem;
+    --reg-text: 1rem;
+    --small-text: .8rem;
+}
+
+@media only screen and (max-width: 680px) {
+    :root {
+        --giant-text: 4rem;
+        --largest-text: 2.4rem;
+        --larger-text: 1.92rem;
+        --large-text: 1.28rem;
+        --reg-text: .8rem;
+        --small-text: 0.64rem;
+    }
+}

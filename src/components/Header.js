@@ -18,9 +18,9 @@ export default function Header() {
                 <div className='nav-wrap'>
                     <nav id='nav' className='flex row page-width'>
                         <div className='logo-wrap'>
-                        <Link activeClass="active" to="header" spy={true} smooth={true} offset={0} duration={500}>
-                            <img src={logo} alt='QubePak logo' />
-                        </Link>
+                            <Link activeClass="active" to="header" spy={true} smooth={true} offset={0} duration={500}>
+                                <img src={logo} alt='QubePak logo' />
+                            </Link>
                         </div>
                         <div className='link-wrap'>
                             <Link activeClass="active" to="mission" spy={true} smooth={true} offset={-120} duration={500}>Mission</Link>

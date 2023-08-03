@@ -1,4 +1,5 @@
 @import "./vars";
+@import "./font-sizes.css";
 
 * {
   font-family: $f1;
@@ -23,10 +24,10 @@ h1, h2, h3, h4, h5, ul, p, a {
 h1, h1 span {
   color: $white;
   font-weight: 500;
-  font-size: $large-text;
+  font-size: var(--large-text);
 
   span {
-    font-size: $larger-text;
+    font-size: var(--larger-text);
   }
 }
 
@@ -38,6 +39,7 @@ p {
   line-height: 1.8;
   margin-bottom: 12px;
   color: $black;
+  font-size: var(--reg-text)
 }
 
 a {
@@ -68,14 +70,14 @@ input {
   padding: 4px;
   margin: 4px 0;
   color: $white;
-  font-size: $reg-text;
+  font-size: var(--reg-text);
   width: 100%;
 }
 
 label {
   text-align: left;
   text-transform: uppercase;
-  font-size: $small-text;
+  font-size: var(--small-text);
   font-weight: 600;
   color: $white;
 }
@@ -158,12 +160,14 @@ li {
   display: grid;
 }
 
-.hide {
+.no-display {
   display: none;
 }
 
-.img-wrap {
-  // display: flex;
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
 }
 
 .margin-auto {
