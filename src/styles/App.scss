@@ -107,6 +107,7 @@ li {
   color: $white;
   padding: 8px 24px; 
   text-transform: uppercase;
+  font-size: var(--reg-text);
   font-weight: 600;
 
   &:hover {
@@ -119,7 +120,8 @@ li {
 .btn-sec {
   background: $p2;
   color: $black;
-  padding: 12px 32px; 
+  padding: 12px 32px;
+  font-size: var(--reg-text);
   font-weight: 600;
   letter-spacing: 1.6px;
 

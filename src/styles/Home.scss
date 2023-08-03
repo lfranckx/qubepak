@@ -134,13 +134,43 @@
         img {
             width: 60%;
         }
+
         .row {
             margin: 40px 0;
-            display: block;
+
+            &.one {
+                flex-direction: column;
+                img {
+                    margin-right: auto;
+                }
+
+                .text-wrap {
+                    margin-left: 0;
+                    padding: 0 20px;
+                }
+            }
 
             &.two {
+                flex-direction: column-reverse;
                 img {
                     margin-left: auto;
+                }
+
+                .text-wrap {
+                    margin-right: 0;
+                    padding: 0 20px;
+                }
+            }
+
+            &.three {
+                flex-direction: column;
+                img {
+                    margin-right: auto;
+                }
+
+                .text-wrap {
+                    margin-left: 0;
+                    padding: 0 20px;
                 }
             }
         }
