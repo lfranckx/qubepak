@@ -69,8 +69,21 @@
 }
 
 #solutions {
-    h2 {
-        font-size: var(--largest-text);
+    padding-top: 60px;
+    .section-title {
+        text-align: center;
+
+        span {
+            font-size: var(--larger-text);
+            font-family: $f3;
+            display: block;
+        }
+    }
+
+    h3 {
+        font-family: $f3;
+        font-size: var(--larger-text);
+        margin-bottom: 4px;
     }
     img {
         max-width: 360px;
