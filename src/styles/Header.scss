@@ -22,6 +22,12 @@ header {
 
         nav {
             padding: 8px;
+
+            a {
+                &:hover {
+                    color: $black;
+                }
+            }
     
             .logo-wrap {
                 max-width: 140px;

@@ -6,7 +6,7 @@ import boxThree from '../images/box-orange.png';
 export default function Details() {
     return (
         <>
-            <section id='solutions'>
+            <section id='about'>
                 <div className='flex row one'>
                     <img className='img' src={boxOne} alt='Advantage' />
                     <div className='text-wrap'>

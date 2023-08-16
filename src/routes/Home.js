@@ -1,7 +1,7 @@
 import '../styles/Home.scss';
 import React from 'react';
 import Mission from '../components/Mission';
-import Details from '../components/Solutions';
+import About from '../components/About';
 import Team from '../components/Team';
 import Faq from '../components/FAQ';
 
@@ -11,7 +11,7 @@ export default function Home() {
             <div className='main-wrap'>
                 <main id='main'>
                     <Mission />
-                    <Details />
+                    <About />
                     <Team />
                     <Faq />
                 </main>
