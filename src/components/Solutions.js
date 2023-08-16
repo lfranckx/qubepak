@@ -7,10 +7,6 @@ export default function Details() {
     return (
         <>
             <section id='solutions'>
-                <h2 class='section-title'>
-                    <span>It’s as simple as </span>
-                    <span>Set-Up/Stack, Settle, Secure, Ship</span>
-                </h2>
                 <div className='flex row one'>
                     <img className='img' src={boxOne} alt='Advantage' />
                     <div className='text-wrap'>
