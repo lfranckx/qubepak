@@ -7,6 +7,8 @@ export default function Details() {
     return (
         <>
             <section id='about'>
+                <h2 className='text-center section-title'><span>Stack, Set-up, Secure, Ship</span></h2>
+                <p className='mg-20 mw-700 text-center'>We offer an environmentally friendly solution that creates a simple and positive unboxing experience while also being recyclable, repulpable, and reusable.</p>
                 <div className='flex row one'>
                     <img className='img' src={boxOne} alt='Advantage' />
                     <div className='text-wrap'>

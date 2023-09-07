@@ -17,10 +17,10 @@ export default function Mission() {
                             <h2>QubePak Thinks Outside the Box</h2>
                         </div>
                         <div class='body-wrap'>
-                            <p className={active ? 'hidden' : ''}>QubePak's mission is to revolutionize the packaging industry by providing a premier unboxing experience emphasizing ecological responsibility; offering innovative and eco-friendly packaging solutions that minimize waste and enhance customer satisfaction. The company aims to establish itself as the go-to brand for eco-conscious consumers and businesses, replacing unnecessary packaging materials and excessive corrugated boxes with inventive designs. QubePak aims to continuously innovate and collaborate with stakeholders to create sustainable packaging solutions that meet current challenges and anticipate future needs.</p>
-                            <p className={active ? '' : 'hidden'}>Integrity and responsibility are the foundation of QubePak's approach to ecological sustainability, guiding the company's commitment to developing environmentally-conscious packaging solutions that meet the highest quality and performance standards. QubePak firmly believes that businesses have a crucial role in protecting the planet and fostering a sustainable future. By championing green packaging practices and solutions, QubePak seeks to inspire positive change in the industry and contribute to a healthier, more sustainable world.</p>
+                            <p className={active ? 'hidden' : ''}>QubePak's mission is to create an exceptional unboxing experience. QubePak is working towards replacing unnecessary packaging materials and excessive corrugated boxes by continuously innovating to create sustainable packaging solutions that outperform the current state. By championing green packaging practices and solutions, QubePak seeks to inspire positive change in the industry and contribute to a healthier, more sustainable world.</p>
+                            {/* <p className={active ? '' : 'hidden'}></p> */}
 
-                            <button className='btn' onClick={() => setActive(!active)}>{active ? "Back →" : "Read More →"}</button>
+                            {/* <button className='btn' onClick={() => setActive(!active)}>{active ? "Back →" : "Read More →"}</button> */}
                         </div>
                     </div>
                 </div>
