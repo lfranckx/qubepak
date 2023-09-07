@@ -14,7 +14,7 @@ export default function Mission() {
                     
                     <div className='text-wrap'>
                         <div className='title-wrap'>
-                            <h2>The Mission and Vision</h2>
+                            <h2>QubePak Thinks Outside the Box</h2>
                         </div>
                         <div class='body-wrap'>
                             <p className={active ? 'hidden' : ''}>QubePak's mission is to revolutionize the packaging industry by providing a premier unboxing experience emphasizing ecological responsibility; offering innovative and eco-friendly packaging solutions that minimize waste and enhance customer satisfaction. The company aims to establish itself as the go-to brand for eco-conscious consumers and businesses, replacing unnecessary packaging materials and excessive corrugated boxes with inventive designs. QubePak aims to continuously innovate and collaborate with stakeholders to create sustainable packaging solutions that meet current challenges and anticipate future needs.</p>
