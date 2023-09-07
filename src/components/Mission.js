@@ -17,7 +17,18 @@ export default function Mission() {
                             <h2>QubePak Thinks Outside the Box</h2>
                         </div>
                         <div class='body-wrap'>
-                            <p className={active ? 'hidden' : ''}>QubePak's mission is to create an exceptional unboxing experience. QubePak is working towards replacing unnecessary packaging materials and excessive corrugated boxes by continuously innovating to create sustainable packaging solutions that outperform the current state. By championing green packaging practices and solutions, QubePak seeks to inspire positive change in the industry and contribute to a healthier, more sustainable world.</p>
+                            <div className={active ? 'hidden' : ''}>
+                                <p>
+                                    QubePak's mission is to create an exceptional unboxing experience. 
+                                </p>
+                                <p>
+                                    QubePak is working towards replacing unnecessary packaging materials and excessive corrugated boxes by continuously innovating to create sustainable packaging solutions that outperform the current state. 
+                                </p>
+                                <p>
+                                    By championing green packaging practices and solutions, QubePak seeks to inspire positive change in the industry and contribute to a healthier, more sustainable world.
+                                </p>
+                            </div>
+                            
                             {/* <p className={active ? '' : 'hidden'}></p> */}
 
                             {/* <button className='btn' onClick={() => setActive(!active)}>{active ? "Back →" : "Read More →"}</button> */}
