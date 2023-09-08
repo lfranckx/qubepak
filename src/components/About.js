@@ -1,7 +1,7 @@
 import React from 'react';
-import boxOne from '../images/box-yellow.png';
-import boxTwo from '../images/box-green.png';
-import boxThree from '../images/box-orange.png';
+import boxOne from '../images/box-yellow-bw.png';
+import boxTwo from '../images/box-green-bw.png';
+import boxThree from '../images/box-orange-bw.png';
 
 export default function Details() {
     return (
