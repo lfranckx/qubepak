@@ -23,7 +23,7 @@ export default function Footer() {
         try {
             emailjs.send("service_ydxsosc", "template_uaz4bs9", newValues, "user_4ZnH44kohKcJmQhnL2VGX")
             .then(res => {
-                handleMessage("Thanks for getting in touch. Our team will reach out soon.");
+                handleMessage("Thanks for getting in touch. Our team will respond promptly.");
                 handleBtnState("Sent");
                 handleBtnDisabled(true);
             }) 
