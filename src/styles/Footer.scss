@@ -27,6 +27,10 @@
 
         .link-wrap {
             margin-bottom: 8px;
+
+            a:hover {
+                color: $black;
+            }
         }
     }
 
