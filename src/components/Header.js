@@ -1,19 +1,30 @@
 import '../styles/Header.scss';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '../images/LOGO.png';
 import { Link } from 'react-scroll';
-import { motion, useTransform, useViewportScroll } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Header() {
-    const { scrollYProgress } = useViewportScroll();
-    const headerHeight = useTransform(scrollYProgress, [0, 1], ["90vh", "0vh"]);
-
+    const [headerHeight, setHeaderHeight] = useState("90vh");
     const [active, setActive] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+            const newHeight = Math.max(90 - (scrollY / 10), 0);
+            setHeaderHeight(`${newHeight}vh`);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         <div className='header-wrap'>
-            <motion.header 
-                style={{ minHeight: headerHeight, transition: "min-height 0.28s ease-in-out" }}
+            <motion.header
+                style={{ minHeight: headerHeight, transition: "min-height 0.4s ease-in-out" }}
                 id='header'
                 className='page-width'
             >
@@ -69,14 +80,9 @@ export default function Header() {
                             </Link>
                         </div>
                     </nav>
-                    <div className='toggler' onClick={() => {setActive(!active)}}>
-                        <div className={`hamburger ${active ? 'active' : ''}`}>
-                            <div className='line'></div>
-                        </div>
-                    </div>
                 </div>
-                
-                <div class='content-wrap flex column'>
+
+                <div className='content-wrap flex column'>
                     <div className='img-wrap'>
                         <img src={logo} alt='QubePak logo' />
                     </div>
