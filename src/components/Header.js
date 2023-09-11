@@ -93,7 +93,7 @@ export default function Header() {
                     </div>
                     <h1><span>(</span> Quintessential Unboxing Experience <span>)</span></h1>
                     <div className='btn-wrap'>
-                        <Link className='btn-sec' activeClass="active" to="about" spy={true} smooth={true} offset={-120} duration={500}>Come and shake up shipping with us</Link>
+                        <Link className='btn-sec' activeClass="active" to="about" spy={true} smooth={true} offset={-300} duration={500}>Come and shake up shipping with us</Link>
                     </div>
                 </div>
             </motion.header>
