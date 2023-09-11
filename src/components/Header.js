@@ -80,6 +80,11 @@ export default function Header() {
                             </Link>
                         </div>
                     </nav>
+                    <div className='toggler' onClick={() => {setActive(!active)}}>
+                        <div className={`hamburger ${active ? 'active' : ''}`}>
+                            <div className='line'></div>
+                        </div>
+                    </div>
                 </div>
 
                 <div className='content-wrap flex column'>

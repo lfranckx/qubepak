@@ -143,6 +143,7 @@ header {
                 opacity: 0;
                 z-index: -1;
                 transition: all ease-in-out .3s;
+                position: relative;
 
                 &.active {
                     height: 100%;
